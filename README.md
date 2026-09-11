@@ -54,6 +54,8 @@ This is a personal hobby project built to explore embedded systems and IoT funda
 ## Possible Improvements
 
 - Add a delay/timeout so the buzzer auto-silences after a set time.
-- Add Wi-Fi notifications (e.g., push notification)) when triggered.
+- Add Wi-Fi notifications (e.g., push notification) when triggered.
 - Add a status LED for "armed" vs "disarmed" state.
 - Battery-power the unit with a low-power sleep mode between checks.
+- Custom PCB to make the project permanent.
+- 3D-printed casing for the PCB. 
