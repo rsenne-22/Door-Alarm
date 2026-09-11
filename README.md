@@ -22,6 +22,7 @@ This is a personal hobby project built to explore embedded systems and IoT funda
 ## Hardware
 
 | Component | Purpose |
+|---|---|
 | ESP32 dev board | Main microcontroller |
 | Reed switch + magnet | Detects door open/closed |
 | Push button | Disarms the alarm before opening the door |
@@ -32,6 +33,7 @@ This is a personal hobby project built to explore embedded systems and IoT funda
 ## Wiring
 
 | Component | ESP32 Pin |
+|---|---|
 | Reed switch | 6 |
 | Button | 42 |
 | Buzzer | 41 |
