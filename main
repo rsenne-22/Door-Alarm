@@ -1,0 +1,37 @@
+
+int Buzzer = 41; // Define GPIO pins with hardware
+int Button = 42;
+int Door_Switch = 6;
+int LED = 40;
+
+bool silenced = false;  // Tracks whether alarm is silenced or active
+
+void setup() {
+  // Defines the hardware as outputs or inputs with internal pull up resistors
+pinMode(Button, INPUT_PULLUP);
+pinMode(Door_Switch, INPUT_PULLUP);
+pinMode(Buzzer, OUTPUT);
+pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  // Read the state of the push button and the door switch
+int buttonstate = digitalRead(Button);
+int doorstate = digitalRead(Door_Switch);
+
+if (doorstate == LOW){ // Door is closed
+  silenced = false;
+}
+if (doorstate == HIGH && buttonstate == LOW) { // Door is opened but the button is active, so the alarm is silenced
+  silenced = true;
+}
+
+if (doorstate == HIGH && !silenced) { // Door opened without the button, sets off the buzzer and LED 
+  digitalWrite(Buzzer, HIGH);
+  digitalWrite(LED, HIGH);
+} else {
+  digitalWrite(Buzzer, LOW);
+  digitalWrite(LED, LOW);
+}
+
+}
