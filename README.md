@@ -30,20 +30,6 @@ This is a personal hobby project built to explore embedded systems and IoT funda
 | LED | Visual alert |
 | Resistors | Pull-up/pull-down for button and reed switch, current-limiting for LED |
 
-## Wiring
-
-| Component | ESP32 Pin |
-|---|---|
-| Reed switch | 6 |
-| Button | 42 |
-| Buzzer | 41 |
-| LED | 40 |
-
-- Reed switch: one leg to the GPIO pin, other leg to GND. Used INPUT_PULLUP in software so the pin reads LOW when the door is closed (switch closed) and HIGH when open (switch open).
-- Button: same pull-up approach — pin reads LOW when pressed.
-- Buzzer: connect directly to a GPIO pin and GND.
-- LED: GPIO pin → resistor → LED → GND.
-
 ## Behavior / Logic
 
 - **Idle/Armed:** Door closed, system waiting.
